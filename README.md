@@ -201,6 +201,30 @@ DEP_LAS: 80.65 -> 82.39
 SENTS_F: 76.90 -> 82.53
 ```
 
+## Pretraining
+
+### Given
+
+- Corpus: EWT + GUM + GENTLE, converted to CLEARNLP format, labels from `en_core_web_md`
+- Ad hoc tokenizer
+- Static Vectors: MD
+- `tok2vec.model.encode: width = 128; depth = 6`
+
+### Test
+
+- `spacy pretrain` on 500 sentences. Loss: 42K -> 32K.
+- `spacy train` using the pretrained weights.
+
+### Results
+
+```
+Training time: 56:45 -> ??
+TAGG_ACC: 96.33 -> ??
+DEP_UAS: 89.53 -> ??
+DEP_LAS: 87.22 -> ??
+SENTS_F: 81.32 -> ??
+```
+
 ### Conclusion
 
-The accuracy is improving here.
+WIP
