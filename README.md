@@ -119,7 +119,7 @@ SENTS_F: 72.73 -> 72.50
 
 ### Conclusion
 
-The training time is double, the results are worse. Might be an undertraining case (`max_steps` capped to 5000).
+The training time is doubling, the accurace is degrading. Might be an undertraining case (`max_steps` capped to 5000).
 
 ## Larger Static Vectors
 
