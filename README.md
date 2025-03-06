@@ -38,7 +38,7 @@ SENTS_F: 80.92 -> 81.32
 
 Negligible difference, you shouldn't probably start with `depth = 8`.
 
-## MultiHashEmbed + MaxoutWindowEncoder vs HashEmbedCNN
+## Architectures: MultiHashEmbed + MaxoutWindowEncoder vs HashEmbedCNN
 
 ### Given
 
@@ -67,7 +67,7 @@ SENTS_F: 80.92 -> 81.17
 
 Negligible difference. Both look like the same thing, just a bit different config syntax. 
 
-## MultiHashEmbed + MaxoutWindowEncoder vs TorchBiLSTMEncoder
+## Architectures: MultiHashEmbed + MaxoutWindowEncoder vs TorchBiLSTMEncoder
 
 ### Given
 
