@@ -29,7 +29,7 @@ SENTS_F: 80.92 -> 81.32
 
 ### Conclusion
 
-Negligible difference, you shouldn't probably start with `depth = 8`
+Negligible difference, you shouldn't probably start with `depth = 8`.
 
 ## MultiHashEmbed + MaxoutWindowEncoder vs HashEmbedCNN
 
@@ -89,6 +89,34 @@ SENTS_F: 81.32 -> 72.73
 
 ### Conclusion
 
-Performance is dropping quite a lot. Retested with larger NN (see below).
+The performance is dropping, quite a lot. Retested with larger NN (see below).
 
+## Static Vector size
+
+### Given
+
+- Corpus: EWT + GUM + GENTLE, converted to CLEARNLP format, labels from `en_core_web_md`
+- Ad hoc tokenizer
+- `tok2vec.model.embed: @architectures = MultiHashEmbed.v2`
+- `tok2vec.model.encode: @architectures = MaxoutWindowEncoder.v2`
+- `tok2vec.model.encode: width = 128`
+- `tok2vec.model.encode: depth = 8`
+
+### Test
+
+- Static Vectors: MD -> LG
+
+### Results
+
+```
+Training time: 1:08:17 -> 1:08:54
+TAGG_ACC: 96.44 -> 96.86
+DEP_UAS: 89.61 -> 90.15
+DEP_LAS: 87.38 -> 88.16
+SENTS_F: 80.92 -> 81.60
+```
+
+### Conclusion
+
+The performance is improving here.
 
