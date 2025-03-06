@@ -6,7 +6,7 @@ Comparison of Spacy performance with different architectures, corpuses, hyperpar
 
 ### Given
 
-- Corpus: EWT + GUM + GENTLE converted to CLEARNLP format.
+- Corpus: EWT + GUM + GENTLE, converted to CLEARNLP format, labels from `en_core_web_md`.
 - Ad hoc tokenizer.
 - Static Vectors: MD.
 - `tok2vec.model.embed: @architectures = MultiHashEmbed.v2`
