@@ -15,9 +15,7 @@ Comparison of Spacy performance with different architectures, corpuses, hyperpar
 
 ### Test
 
-```
-tok2vec.model.encode: depth = 8 -> 6
-```
+- `tok2vec.model.encode: depth = 8 -> 6`
 
 ### Results
 
