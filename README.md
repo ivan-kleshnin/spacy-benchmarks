@@ -121,6 +121,33 @@ SENTS_F: 72.73 -> 72.50
 
 The training time is doubling, the accurace is degrading. Might be an undertraining case (`max_steps` capped to 5000).
 
+## Architectures: TorchBiLSTMEncoder with more training time (3)
+
+### Given
+
+- Corpus: EWT + GUM + GENTLE, converted to CLEARNLP format, labels from `en_core_web_md`
+- Ad hoc tokenizer
+- Static Vectors: MD
+- `tok2vec.model.encode: width = 128; depth = 6`
+
+### Test
+
+- Update `training: max_steps = 5000 -> 10000`, same `patience = 1000`.
+
+### Results
+
+```
+Training time: 58:59 -> 2:14:14
+TAGG_ACC: 89.40 -> 95.50
+DEP_UAS: 82.65 -> 87.75
+DEP_LAS: 77.91 -> 85.08 
+SENTS_F: 72.50 -> 76.93
+```
+
+### Conclusion
+
+The accuracy has improved. While the progress slowed down, it probably could continue. We got literally +1 extra hour of training for a couple of extra % of accuracy.
+
 ## Larger Static Vectors
 
 ### Given
