@@ -214,10 +214,12 @@ SENTS_F: 76.90 -> 82.53
 
 - `spacy pretrain` on 500 sentences. Loss: 42K -> 32K.
 - `spacy train` using the pretrained weights.
+- `spacy pretrain` on 2500 sentences. Loss: 42K -> 29K.
+- `spacy train` using the pretrained weights.
 
 ### Results
 
-No benefits. Also retried with 2500 sentences. NN starts from higher scores (Epoch 0) but flattens to the same numbers as without pretraining.
+No measurable benefits. NN starts from higher scores (Epoch 0) but flattens to the same numbers as without pretraining.
 
 ### Conclusion
 
