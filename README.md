@@ -94,7 +94,7 @@ SENTS_F: 81.32 -> 72.73
 
 ### Conclusion
 
-The performance is dropping, quite a lot. Retested with larger NN (see below).
+The accuracy is dropping, quite a lot. Retested with larger NN (see below).
 
 ## Static Vector size
 
@@ -122,5 +122,5 @@ SENTS_F: 80.92 -> 81.60
 
 ### Conclusion
 
-The performance is improving here.
+The accuracy is improving here.
 
