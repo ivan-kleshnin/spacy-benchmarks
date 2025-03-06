@@ -2,6 +2,13 @@
 
 Comparison of Spacy performance with different architectures, corpuses, hyperparams...
 
+Current benchmarks:
+- Training time
+- TAGG_ACC
+- DEP_UAS
+- DEP_LAS
+- SENTS_F
+
 ## tok2vec.model depth
 
 ### Given
