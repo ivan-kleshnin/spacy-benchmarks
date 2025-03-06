@@ -217,14 +217,8 @@ SENTS_F: 76.90 -> 82.53
 
 ### Results
 
-```
-Training time: 56:45 -> ??
-TAGG_ACC: 96.33 -> ??
-DEP_UAS: 89.53 -> ??
-DEP_LAS: 87.22 -> ??
-SENTS_F: 81.32 -> ??
-```
+No benefits. Also retried with 2500 sentences. NN starts from higher scores (Epoch 0) but flattens to the same numbers as without pretraining.
 
 ### Conclusion
 
-WIP
+Probably due to limited size of pretraining corpus.
