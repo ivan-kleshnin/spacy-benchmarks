@@ -98,7 +98,7 @@ SENTS_F: 81.32 -> 72.73
 
 ### Conclusion
 
-The accuracy is dropping, quite a lot. Retested with larger NN (see below).
+The accuracy is dropping, quite a lot. Retested with larger NN (see below). Might be an undertraining case (`max_steps` capped to 5000).
 
 ## Architectures: MultiHashEmbed + MaxoutWindowEncoder vs TorchBiLSTMEncoder (2)
 
