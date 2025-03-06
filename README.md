@@ -38,8 +38,7 @@ Negligible difference, you shouldn't probably start with `depth = 8`.
 - Corpus: EWT + GUM + GENTLE, converted to CLEARNLP format, labels from `en_core_web_md`
 - Ad hoc tokenizer
 - Static Vectors: MD
-- `tok2vec.model.encode: width = 128`
-- `tok2vec.model.encode: depth = 8`
+- `tok2vec.model.encode: width = 128; depth = 8`
 
 ### Test
 
@@ -68,8 +67,7 @@ Negligible difference. Both look like the same thing, just a bit different confi
 - Corpus: EWT + GUM + GENTLE, converted to CLEARNLP format, labels from `en_core_web_md`
 - Ad hoc tokenizer
 - Static Vectors: MD
-- `tok2vec.model.encode: width = 128`
-- `tok2vec.model.encode: depth = 6`
+- `tok2vec.model.encode: width = 128; depth = 6`
 
 ### Test
 
@@ -99,8 +97,7 @@ The performance is dropping, quite a lot. Retested with larger NN (see below).
 - Ad hoc tokenizer
 - `tok2vec.model.embed: @architectures = MultiHashEmbed.v2`
 - `tok2vec.model.encode: @architectures = MaxoutWindowEncoder.v2`
-- `tok2vec.model.encode: width = 128`
-- `tok2vec.model.encode: depth = 8`
+- `tok2vec.model.encode: width = 128; depth = 8`
 
 ### Test
 
