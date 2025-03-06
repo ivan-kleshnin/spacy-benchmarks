@@ -4,18 +4,20 @@ Comparison of Spacy performance with different architectures, corpuses, hyperpar
 
 ## tok2vec.model depth
 
-### Constants
+### Given
 
 - Corpus: EWT + GUM + GENTLE converted to CLEARNLP format.
 - Ad hoc tokenizer.
 - Static Vectors: MD.
+- `tok2vec.model.encode.width`: 128
 
-### Experiment
+### Test
 
 ```
-components.tok2vec.model.encode.width: 128
-components.tok2vec.model.encode.depth: 8 -> 6
+tok2vec.model.encode.depth: 8 -> 6
 ```
+
+### Results
 
 ```
 Training time: 1:08:16.50 -> 56:44.51
