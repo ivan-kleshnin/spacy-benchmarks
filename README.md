@@ -9,6 +9,10 @@ Current benchmarks:
 - `DEP_LAS`
 - `SENTS_F`
 
+Global defaults:
+- `nlp: batch_size = 512`
+- `training: patience = 1000; max_steps = 5000`
+
 ## tok2vec.model depth
 
 ### Given
@@ -95,6 +99,27 @@ SENTS_F: 81.32 -> 72.73
 ### Conclusion
 
 The accuracy is dropping, quite a lot. Retested with larger NN (see below).
+
+## Architectures: MultiHashEmbed + MaxoutWindowEncoder vs TorchBiLSTMEncoder (2)
+
+### Given
+
+Same as above but:
+- `tok2vec.model.encode: width = 192; depth = 8`
+
+### Results
+
+```
+Training time: 58:59 -> 2:01:11
+TAGG_ACC: 93.45 -> 89.40
+DEP_UAS: 84.19 -> 82.65
+DEP_LAS: 80.58 -> 77.91
+SENTS_F: 72.73 -> 72.50
+```
+
+### Conclusion
+
+The training time is double, the results are worse. Might be an undertraining case (`max_steps` capped to 5000).
 
 ## Larger Static Vectors
 
