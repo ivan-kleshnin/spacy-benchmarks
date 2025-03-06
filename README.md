@@ -96,7 +96,7 @@ SENTS_F: 81.32 -> 72.73
 
 The accuracy is dropping, quite a lot. Retested with larger NN (see below).
 
-## Static Vector size
+## Larger Static Vectors
 
 ### Given
 
@@ -124,3 +124,31 @@ SENTS_F: 80.92 -> 81.60
 
 The accuracy is improving here.
 
+## Larger Corpus
+
+### Given
+
+- Ad hoc tokenizer
+- Static Vectors: MD
+- `tok2vec.model.embed: @architectures = MultiHashEmbed.v2`
+- `tok2vec.model.encode: @architectures = MaxoutWindowEncoder.v2`
+- `tok2vec.model.encode: width = 128; depth = 6`
+
+### Test
+
+- Corpus 1: EWT
+- Corpus 2: EWT + GUM
+
+### Results
+
+```
+Training time: 1:08:17 -> 1:08:54
+TAGG_ACC: 93.89 -> 95.11
+DEP_UAS: 84.42 -> 85.86
+DEP_LAS: 80.65 -> 82.39
+SENTS_F: 76.90 -> 82.53
+```
+
+### Conclusion
+
+The accuracy is improving here.
