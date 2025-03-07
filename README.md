@@ -224,3 +224,17 @@ No measurable benefits. NN starts from higher scores (Epoch 0) but flattens to t
 ### Conclusion
 
 Probably due to limited size of pretraining corpus.
+
+## LG -> MD and TRF -> LG 
+
+The idea is to train MD model on LG result labels and LG model on TRF result labels, instead of MD -> MD and LG -> LG.
+
+### Results
+
+- Slight improvement for LG -> MD (in comparison to MD), slightly worse than LG -> LG.
+- Slight worsening for TRF -> LG, explainable by the fact that TRF relies on completely different tokenization layer.
+
+## Larger Pretraining
+
+WIP
+
