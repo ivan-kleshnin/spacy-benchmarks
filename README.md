@@ -228,10 +228,11 @@ Probably due to limited size of pretraining corpus.
 ## LG -> MD and TRF -> LG 
 
 The idea is to train MD model on LG result labels and LG model on TRF result labels, instead of MD -> MD and LG -> LG.
+The assumption is that, perhaps, result of larger models are more systematic and provide better inputs to learn from.
 
 ### Results
 
-- Slight improvement for LG -> MD (in comparison to MD), slightly worse than LG -> LG.
+- Slight improvement for LG -> MD (in comparison to MD), slightly worse than LG -> LG. 
 - Slight worsening for TRF -> LG, explainable by the fact that TRF relies on completely different tokenization layer.
 
 ## Larger Pretraining
