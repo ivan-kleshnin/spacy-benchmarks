@@ -90,10 +90,6 @@ infiles = [
   if filename.endswith(".jsonl") and "gentle-" in filename
 ]
 
-# TODO `pipe` all texts through models and pass two docs to `is_recognizable_text`
-
-# --- Report on any water use amounts ---
-
 for infile in infiles:
   print(f"Handling {infile!r}")
   data = srsly.read_jsonl(infile)
